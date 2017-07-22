@@ -1,6 +1,8 @@
 <?php
 
-	$command = "pure-pw userdel $user_login-ftptemp;(echo ".$_SESSION['rkey']."; echo ".$_SESSION['rkey'].") | pure-pw useradd $user_login-ftptemp -d /home/sgbima/public_html/  -u  $user_login;pure-pw mkdb";
+	$command = "pure-pw userdel $user_login-ftptemp;(echo ".$_SESSION['rkey']."; echo ".$_SESSION['rkey'].") | pure-pw useradd $user_login-ftptemp -d /home/$user_login/public_html/  -u  $user_login;pure-pw mkdb";
+
+	//echo $command;
 
 	shell_exec($command);
 
